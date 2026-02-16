@@ -13,8 +13,12 @@ app.use(express.json()); //inbuilt middleware to handle json data in the request
 const port = process.env.PORT || 5000;
 
 app.use("/api/contacts", require("./routes/contactRoutes"));
+app.use("/api/users", require("./routes/userRoutes"));
+
 app.use(errorHandler); // it will help us to handle the error in the application, it will be called when there is an error in the application, it will be called in the controllers when there is an error in the application
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
+
+
