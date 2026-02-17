@@ -60,7 +60,7 @@ const accessToken = jwt.sign(
     }
   },
   process.env.ACCESS_TOKEN_SECRET,
-  {expiresIn: "1min"} 
+  {expiresIn: "15min"} 
 );
     res.status(200).json({accessToken}); 
   } else {
@@ -76,7 +76,7 @@ const accessToken = jwt.sign(
 //@route POST /api/users/current
 //@access private
 const currentUser = asynchandler(async (req, res) => {
-  res.json({ message: "current user information" });
+  res.json(req.user);
 });
 
 module.exports = { registerUser, loginUser, currentUser };
