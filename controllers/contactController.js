@@ -96,9 +96,10 @@ const deleteContact = asynchandler(async (req, res) => {
     );
   }
 
-  await contact.deleteOne({ _id: req.params.id }); //remove function is deprecated so we are using deleteOne function to delete the contact from the database
-//   await contact.deleteOne(); //remove function is deprecated so we are using deleteOne function to delete the contact from the database
-  
+  //   await contact.deleteOne({ _id: req.params.id }); //remove function is deprecated so we are using deleteOne function to delete the contact from the database
+  await contact.deleteOne(); //remove function is deprecated so we are using deleteOne function to delete the contact from the database
+  //contact.deleteOne() (instance method), it deletes that specific document - it already knows which one to delete
+  //The { _id: req.params.id } parameter is redundant because contact already knows its own _id
 
   res.status(200).json(contact);
 });
