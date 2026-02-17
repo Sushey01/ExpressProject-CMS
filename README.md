@@ -5,6 +5,7 @@ A comprehensive RESTful API for managing contacts with user authentication, buil
 ## 📚 Table of Contents
 
 - [Project Overview](#project-overview)
+- [What is a RESTful API?](#what-is-a-restful-api)
 - [Technologies Used](#technologies-used)
 - [Project Structure](#project-structure)
 - [Getting Started](#getting-started)
